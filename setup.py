@@ -27,7 +27,7 @@ for dep in info.get('depends', []):
         requires.append('trytond_%s >= %s.%s, < %s.%s' %
             (dep, major_version, minor_version, major_version,
                 minor_version + 1))
-requires.append('trytond >= %s.%s, < %s.%s' %
+requires.append('trytond >= %s.%s.dev0, < %s.%s.dev0' %
     (major_version, minor_version, major_version, minor_version + 1))
 tests_require = ['proteus >= %s.%s, < %s.%s' %
     (major_version, minor_version, major_version, minor_version + 1)]
