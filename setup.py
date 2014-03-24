@@ -24,7 +24,7 @@ minor_version = int(minor_version)
 requires = ['python-sql']
 for dep in info.get('depends', []):
     if not re.match(r'(ir|res|webdav)(\W|$)', dep):
-        requires.append('trytond_%s >= %s.%s, < %s.%s' %
+        requires.append('tryton_%s >= %s.%s, < %s.%s' %
             (dep, major_version, minor_version, major_version,
                 minor_version + 1))
 requires.append('trytond >= %s.%s.dev0, < %s.%s.dev0' %
@@ -32,7 +32,7 @@ requires.append('trytond >= %s.%s.dev0, < %s.%s.dev0' %
 tests_require = ['proteus >= %s.%s, < %s.%s' %
     (major_version, minor_version, major_version, minor_version + 1)]
 
-setup(name='trytond_stock',
+setup(name='tryton_stock',
     version=info.get('version', '0.0.1'),
     description='Tryton module for stock and inventory',
     long_description=read('README'),
